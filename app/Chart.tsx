@@ -24,15 +24,20 @@ const Chart: React.FC<ChartProps> = ({
         position: "relative",
       }}
     >
-      {subjects.map((subject) => (
-        <Party {...subject} key={subject.name} />
+      {subjects.map((subject, i) => (
+        <Party
+          {...subject}
+          key={subject.name}
+          isBordering={subjects[i].percent >= 5 && subjects[i + 1]?.percent < 5}
+        />
       ))}
 
       <div
         className="absolute flex text-white h-28 bottom-0 left-0 w-full justify-around items-center text-4xl font-bold"
         style={{
           backdropFilter: "blur(64px)",
-          background: "rgba(0,0,0,0.15)",
+          background: "rgba(16,16,16)",
+          zIndex: 10,
         }}
       >
         <div>Sečteno okresků: {total} %</div>

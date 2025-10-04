@@ -8,9 +8,17 @@ interface PartyProps {
   color?: string;
   shortName?: string;
   voters?: number;
+  isBordering?: boolean;
 }
 
-const Party = ({ name, percent, shortName, color, voters }: PartyProps) => {
+const Party = ({
+  name,
+  percent,
+  shortName,
+  color,
+  voters,
+  isBordering,
+}: PartyProps) => {
   const [fontSizes, setFontSizes] = React.useState<{
     name: number;
     percent: number;
@@ -65,13 +73,15 @@ const Party = ({ name, percent, shortName, color, voters }: PartyProps) => {
   return (
     <div
       style={{
-        background: color,
-        color: partyColor.isLight() ? "black" : "white",
+        background: partyColor.lightness(13).hex(),
+        color: "red",
         width: `${percent}%`,
         paddingBottom: "10rem",
-        paddingTop: "1rem",
+        borderTop: `8px solid ${partyColor.hex()}`,
+        paddingTop: "1.5rem",
+        position: "relative",
       }}
-      className="flex flex-col"
+      className={`flex flex-col ${isBordering ? "bordering" : ""}`}
     >
       <div className="mb-12 grow flex flex-col">
         <div
@@ -83,7 +93,8 @@ const Party = ({ name, percent, shortName, color, voters }: PartyProps) => {
             writingMode: "vertical-lr",
             display: "flex",
             alignItems: "center",
-            color: partyColor.isLight() ? "black" : "white",
+            color: "white",
+            opacity: 0.8,
           }}
         >
           <div className="grow">
@@ -101,7 +112,7 @@ const Party = ({ name, percent, shortName, color, voters }: PartyProps) => {
           </div>
           <div
             style={{
-              opacity: 0.7,
+              opacity: 0.85,
               fontSize: Math.min(64, fontSizes.percent * 0.66) * 0.75,
             }}
           >
