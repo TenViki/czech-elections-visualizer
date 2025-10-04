@@ -40,7 +40,7 @@ const Chart: React.FC<ChartProps> = ({
           zIndex: 10,
         }}
       >
-        <div>Sečteno okresků: {total} %</div>
+        <div>Sečteno okrsků: {total} %</div>
         <div>
           Počet hlasů: {Intl.NumberFormat("cs-CZ").format(+totalVotes!)}
         </div>
