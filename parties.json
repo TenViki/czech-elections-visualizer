@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Rebelové",
+    "shortName": "Rebelové",
+    "color": "#333333",
+    "order": 1
+  },
+  {
+    "name": "Moravské zemské hnutí",
+    "shortName": "MZH",
+    "color": "#322f0b",
+    "order": 2
+  },
+  {
+    "name": "Jasný Signál Nezávislých",
+    "shortName": "JaSaN",
+    "color": "#FF0000",
+    "order": 3
+  },
+  {
+    "name": "VÝZVA 2025",
+    "shortName": "VÝZVA",
+    "color": "#00508e",
+    "order": 4
+  },
+  {
+    "name": "SMS – Stát Má Sloužit",
+    "shortName": "SMSka",
+    "color": "#049b9b",
+    "order": 5
+  },
+  {
+    "name": "Svoboda a přímá demokracie (SPD)",
+    "shortName": "SPD",
+    "color": "#6696AE",
+    "order": 6
+  },
+  {
+    "name": "ČSSD – Česká suverenita sociální demokracie",
+    "shortName": "ČSSD",
+    "color": "#f68b1f",
+    "order": 7
+  },
+  {
+    "name": "PŘÍSAHA občanské hnutí",
+    "shortName": "PŘÍSAHA",
+    "color": "#0033FF",
+    "order": 8
+  },
+  {
+    "name": "Levice",
+    "shortName": "Levice",
+    "color": "#d70e44",
+    "order": 9
+  },
+  {
+    "name": "Česká republika na 1. místě!",
+    "shortName": "ČR1",
+    "color": "#e7040f",
+    "order": 10
+  },
+  {
+    "name": "Koalice KDU-ČSL, ODS a TOP 09",
+    "shortName": "SPOLU",
+    "color": "#00ea2a",
+    "order": 11
+  },
+  {
+    "name": "ŠVÝCARSKÁ DEMOKRACIE - Švýcaři si užívají nejvyšší kvality života na světě …",
+    "shortName": "Švýcarská demokracie",
+    "color": "#562140",
+    "order": 12
+  },
+  {
+    "name": "Urza.cz: Nechceme vaše hlasy; ke svobodě se nelze provolit… Jdeme jinou cestou — najdete ji na webu www.urza.cz",
+    "shortName": "Nevolte Urza.cz.",
+    "color": "#FFD700",
+    "order": 13
+  },
+  {
+    "name": "Hnutí občanů a podnikatelů",
+    "shortName": "HOP Hydra",
+    "color": "#fbb030",
+    "order": 14
+  },
+  {
+    "name": "Hnutí Generace",
+    "shortName": "Generace",
+    "color": "#14afc3",
+    "order": 15
+  },
+  {
+    "name": "Česká pirátská strana",
+    "shortName": "Piráti",
+    "color": "#000",
+    "order": 16
+  },
+  {
+    "name": "Koruna Česká (monarchistická strana Čech, Moravy a Slezska)",
+    "shortName": "Koruna Česká",
+    "color": "#9a26cc",
+    "order": 17
+  },
+  {
+    "name": "Volt Česko",
+    "shortName": "Volt",
+    "color": "#4b2574",
+    "order": 18
+  },
+  {
+    "name": "Volte Pravý Blok-stranu za ODVOLAT.polit.,NÍZKÉ daně,VYROVN.rozp.,MIN.byrokr.,SPRAV.just.,PŘÍMOU demokr. WWW.CIBULKA.NET",
+    "shortName": "Volte Pravý Blok",
+    "color": "#c5ddfd",
+    "order": 19
+  },
+  {
+    "name": "Motoristé sobě",
+    "shortName": "AUTO",
+    "color": "#1b9dd9",
+    "order": 20
+  },
+  {
+    "name": "Balbínova poetická strana",
+    "shortName": "BPS",
+    "color": "#4b1300",
+    "order": 21
+  },
+  {
+    "name": "ANO 2011",
+    "shortName": "ANO",
+    "color": "#2f2f65",
+    "order": 22
+  },
+  {
+    "name": "STAROSTOVÉ A NEZÁVISLÍ",
+    "shortName": "STAN",
+    "color": "#ce0f68",
+    "order": 23
+  },
+  {
+    "name": "Hnutí Kruh",
+    "shortName": "Kruh",
+    "color": "#ff7f80",
+    "order": 24
+  },
+  {
+    "name": "Stačilo!",
+    "shortName": "Stačilo!",
+    "color": "#BE0E0E",
+    "order": 25
+  },
+  {
+    "name": "Voluntia",
+    "shortName": "Voluntia",
+    "color": "#ffd600",
+    "order": 26
+  }
+]
