@@ -5,6 +5,8 @@ import parse from "node-html-parser";
 import fs from "fs/promises";
 import { ResponseData } from "./response";
 
+let lastLog = Date.now() - 60000;
+
 export interface Subject {
   name: string;
   percent: number;
@@ -74,6 +76,15 @@ export const GET = async () => {
   //     attendance = cols[5]?.text.trim() || "N/A";
   //   }
   // }
+
+  if (Date.now() - lastLog > 30000) {
+    const json = JSON.stringify({ subjects, total, attendance, totalVotes });
+    lastLog = Date.now();
+
+    fs.writeFile(`logs/${Date.now()}.json`, json).catch((err) => {
+      console.error("Failed to write log file", err);
+    });
+  }
 
   console.log(`Fetched data: ${subjects.length} subjects`);
   console.log(`Total votes: ${total}`);
