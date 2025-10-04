@@ -11,7 +11,6 @@ const Visualize = () => {
     queryFn: getData,
     refetchInterval: 5000,
   });
-
   return (
     <div
       style={{

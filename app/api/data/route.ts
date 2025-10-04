@@ -32,12 +32,6 @@ export const GET = async () => {
 
   const data = (await res.json()) as ResponseData;
 
-  const html = await res.text();
-  const parsed = parse(html);
-
-  const tables = parsed.querySelectorAll("table");
-  const metaTable = tables.shift();
-
   const subjects: Subject[] = [];
 
   // let index = 0;
@@ -49,7 +43,7 @@ export const GET = async () => {
       name: party.shortName,
       shortName: party.abbreviation,
       color: `#${party.color}`,
-      percent: party.percent,
+      percent: party.percent / 100,
       voters: party.votes,
     });
   }
@@ -67,9 +61,9 @@ export const GET = async () => {
   let totalVotes;
   let attendance;
 
-  total = "N/A";
-  totalVotes = "N/A";
-  attendance = "N/A";
+  total = data.data.results[0].processedPercent / 100;
+  totalVotes = data.data.results[0].validVotes;
+  attendance = data.data.results[0].attendancePercent / 100;
 
   // if (metaTable) {
   //   const dataRow = metaTable.querySelectorAll("tr")[2];

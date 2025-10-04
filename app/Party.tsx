@@ -20,29 +20,37 @@ const Party = ({ name, percent, shortName, color, voters }: PartyProps) => {
     color = "#ccc";
   }
 
+  if (percent < 0.1) {
+    percent = 0.1;
+  }
+
   useEffect(() => {
     const handleResize = () => {
       // recalculate font sizes
       const partyColor = new Color(color!);
-      const calculatedWidth = window.innerWidth * (percent / 100);
 
+      const calculatedPercent = Math.max(percent, 0.1);
+
+      const calculatedWidth = window.innerWidth * (calculatedPercent / 100);
       let percentageWidth;
       let percentageSize = 0;
+
+      let attempts = 0;
 
       do {
         percentageSize++;
         percentageWidth = getTextWidth(
-          `${percent.toFixed(1)}%`,
+          `${calculatedPercent.toFixed(1)}%`,
           `bold ${percentageSize}px "Segoe UI"`
         );
-      } while (percentageWidth < calculatedWidth * 0.9);
+        attempts++;
+        console.log(name, percentageSize, percentageWidth);
+      } while (percentageWidth < calculatedWidth * 0.9 && attempts++ < 100);
 
       // const percentageSize = Math.min(64, calculatedWidth * 0.66);
       setFontSizes({ name: calculatedWidth, percent: percentageSize });
     };
-
     handleResize();
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [percent]);
@@ -53,7 +61,6 @@ const Party = ({ name, percent, shortName, color, voters }: PartyProps) => {
   // calculate font size based on width of the party div.
   // the text size should be such that the text fits in the div.¨
   // temember that in this case the percent is in normal orientation, not rotated
-  const percentageSize = Math.min(64, calculatedWidth * 0.66);
 
   return (
     <div
