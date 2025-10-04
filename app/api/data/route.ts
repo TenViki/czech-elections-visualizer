@@ -1,3 +1,5 @@
+/* eslint-disable prefer-const */
+
 import axios from "axios";
 import parse from "node-html-parser";
 import fs from "fs/promises";
@@ -61,9 +63,13 @@ export const GET = async () => {
   //   }
   // );
 
-  let total = "n/a";
-  let totalVotes = "n/a";
-  let attendance = "n/a";
+  let total;
+  let totalVotes;
+  let attendance;
+
+  total = "N/A";
+  totalVotes = "N/A";
+  attendance = "N/A";
 
   // if (metaTable) {
   //   const dataRow = metaTable.querySelectorAll("tr")[2];
